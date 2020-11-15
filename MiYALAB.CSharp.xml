@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiYALAB.CSharp</name>
+    </assembly>
+    <members>
+        <member name="T:MiYALAB.CSharp.DebugMonitor">
+            <summary>
+            デバッグモニタを表示するフォームクラスです。
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.#ctor">
+            <summary>
+            デバッグモニタを表示するフォームクラスです。
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.#ctor(System.Int32,System.Int32)">
+            <summary>
+            デバッグモニタを表示するフォームクラスです。
+            </summary>
+            <param name="positionX">変更後のウインドウのx座標</param>
+            <param name="positionY">変更後のウインドウのy座標</param>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            デバッグモニタを表示するフォームクラスです。
+            </summary>
+            <param name="positionX">変更後のウインドウのx座標</param>
+            <param name="positionY">変更後のウインドウのy座標</param>
+            <param name="sizeX">変更後のウインドウの幅</param>
+            <param name="sizeY">変更後のウインドウの高さ</param>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.InitializeComponent">
+            <summary>
+            デザイナーで自動作成されたコード
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.DebugMonitor_SizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            フォームサイズ変更時イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.ChangeWindowSize(System.Int32,System.Int32)">
+            <summary>
+            デバッグモニタのサイズを変更します。
+            </summary>
+            <param name="x">変更後のウインドウの幅</param>
+            <param name="y">変更後のウインドウの高さ</param>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.MoveWindow(System.Int32,System.Int32)">
+            <summary>
+            デバッグモニタの表示位置を変更します。
+            </summary>
+            <param name="x">変更後のウインドウのx座標</param>
+            <param name="y">変更後のウインドウのy座標</param>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.Write(System.String)">
+            <summary>
+            デバッグモニタにテキストを挿入します。
+            </summary>
+            <param name="text">挿入テキスト</param>
+        </member>
+        <member name="M:MiYALAB.CSharp.DebugMonitor.WriteLine(System.String)">
+            <summary>
+            デバッグモニタに改行付きでテキストを挿入します。
+            </summary>
+            <param name="text">挿入テキスト</param>
+        </member>
+        <member name="T:MiYALAB.CSharp.GraphMonitor">
+            <summary>
+            グラフモニタを表示するフォームクラスです。
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.GraphMonitor.#ctor">
+            <summary>
+            デバッグモニタを表示するフォームクラスです。
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.GraphMonitor.#ctor(System.Int32,System.Int32)">
+            <summary>
+            デバッグモニタを表示するフォームクラスです。
+            </summary>
+            <param name="positionX">変更後のウインドウのx座標</param>
+            <param name="positionY">変更後のウインドウのy座標</param>
+        </member>
+        <member name="M:MiYALAB.CSharp.GraphMonitor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            デバッグモニタを表示するフォームクラスです。
+            </summary>
+            <param name="positionX">変更後のウインドウのx座標</param>
+            <param name="positionY">変更後のウインドウのy座標</param>
+            <param name="sizeX">変更後のウインドウの幅</param>
+            <param name="sizeY">変更後のウインドウの高さ</param>
+        </member>
+        <member name="M:MiYALAB.CSharp.GraphMonitor.InitializeComponent">
+            <summary>
+            デザイナーで自動作成されたコード
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.GraphMonitor.GraphMonitor_Load(System.Object,System.EventArgs)">
+            <summary>
+            フォーム読み込み時イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiYALAB.CSharp.GraphMonitor.GraphMonitor_SizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            フォームサイズ変更時イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiYALAB.CSharp.GraphMonitor.ChangeWindowSize(System.Int32,System.Int32)">
+            <summary>
+            デバッグモニタのサイズを変更します。
+            </summary>
+            <param name="x">変更後のウインドウの幅</param>
+            <param name="y">変更後のウインドウの高さ</param>
+        </member>
+        <member name="M:MiYALAB.CSharp.GraphMonitor.MoveWindow(System.Int32,System.Int32)">
+            <summary>
+            デバッグモニタの表示位置を変更します。
+            </summary>
+            <param name="x">変更後のウインドウのx座標</param>
+            <param name="y">変更後のウインドウのy座標</param>
+        </member>
+    </members>
+</doc>
