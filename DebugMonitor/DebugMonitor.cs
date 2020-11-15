@@ -1,4 +1,4 @@
-﻿/*
+/*
  * MIT License
  * 
  * Copyright (c) 2020 MiYA LAB
@@ -47,6 +47,8 @@ namespace MiYALAB.CSharp
         public DebugMonitor()
         {
             InitializeComponent();
+
+            this.Show();
         }
 
         /// <summary>
