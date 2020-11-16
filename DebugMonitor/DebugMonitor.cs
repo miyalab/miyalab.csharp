@@ -1,7 +1,7 @@
-/*
+﻿/*
  * MIT License
  * 
- * Copyright (c) 2020 K.Miyauchi
+ * Copyright (c) 2020 MiYA LAB(K.Miyauchi)
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -85,6 +85,7 @@ namespace MiYALAB.CSharp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DebugMonitor));
             this.textBoxDebug = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -100,7 +101,9 @@ namespace MiYALAB.CSharp
             // DebugMonitor
             // 
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ControlBox = false;
             this.Controls.Add(this.textBoxDebug);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DebugMonitor";
