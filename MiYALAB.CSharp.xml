@@ -68,6 +68,30 @@
             </summary>
             <param name="text">挿入テキスト</param>
         </member>
+        <member name="T:MiYALAB.CSharp.GamepadProcessor">
+            <summary>
+            ゲームパッドコントロール用クラス
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.GamepadProcessor.GetInfo.joyGetNumDevs">
+            <summary>
+            最大接続ゲームパッド数取得
+            </summary>
+            <returns>最大ゲームパッド数</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.GamepadProcessor.GetInfo.joyGetPosEx(System.Int32,MiYALAB.CSharp.GamepadProcessor.JOYINFOEX@)">
+            <summary>
+            ゲームパッド入力パラメータ更新
+            </summary>
+            <param name="uJoyID"></param>
+            <param name="pji"></param>
+            <returns>0：接続, otherwise：未接続</returns>
+        </member>
+        <member name="T:MiYALAB.CSharp.Gamepad.DUALSHOCK4">
+            <summary>
+            GamepadProcessor用 DualShock4 シンボル値
+            </summary>
+        </member>
         <member name="T:MiYALAB.CSharp.GraphMonitor">
             <summary>
             グラフモニタを表示するフォームクラスです。
