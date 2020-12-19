@@ -104,6 +104,20 @@
             デザイナーで自動作成されたコード
             </summary>
         </member>
+        <member name="M:MiYALAB.CSharp.Monitor.GraphicMonitor.pictureBox_SizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            pictureBoxのサイズが変更時イベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MiYALAB.CSharp.Monitor.GraphicMonitor.pictureBox_Click(System.Object,System.EventArgs)">
+            <summary>
+            PictureBoxクリックイベント
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="M:MiYALAB.CSharp.Monitor.GraphicMonitor.ChangeWindowSize(System.Int32,System.Int32)">
             <summary>
             モニタのサイズを変更します．
@@ -152,7 +166,7 @@
             </summary>
             <param name="uJoyID"></param>
             <param name="pji"></param>
-            <returns>0：接続, otherwise：未接続</returns>
+            <returns>0：接続, otherwise：エラー</returns>
         </member>
         <member name="T:MiYALAB.CSharp.Gamepad.DUALSHOCK4">
             <summary>
@@ -240,102 +254,6 @@
             画像処理クラス
             </summary>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],System.Int32,System.Int32,System.Int32)">
-            <summary>
-            byte配列のbitmapデータを二値化する．
-            </summary>
-            <param name="rgbValues">byte配列に変換されたbitmap</param>
-            <param name="rThreshold">最大赤色閾値</param>
-            <param name="gThreshold">最大緑色閾値</param>
-            <param name="bThreshold">最大青色閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            byte配列のbitmapデータを二値化する．
-            </summary>
-            <param name="rgbValues">byte配列に変換されたbitmap</param>
-            <param name="rThresholdMax">最大赤色閾値</param>
-            <param name="gThresholdMax">最大緑色閾値</param>
-            <param name="bThresholdMax">最大青色閾値</param>
-            <param name="rThresholdMin">最小赤色閾値</param>
-            <param name="gThresholdMin">最小緑色閾値</param>
-            <param name="bThresholdMin">最小青色閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
-            <summary>
-            byte配列のbitmapデータを二値化する．
-            </summary>
-            <param name="rgbValues">byte配列に変換されたbitmap</param>
-            <param name="thresholdMax">最大閾値</param>
-            <param name="thresholdMin">最小閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB)">
-            <summary>
-            byte配列のbitmapデータを二値化する．
-            </summary>
-            <param name="rgbValues">byte配列に変換されたbitmap</param>
-            <param name="thresholdMax">最大閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],System.Int32)">
-            <summary>
-            byte配列のbitmapデータを二値化する．
-            </summary>
-            <param name="rgbValues">byte配列に変換されたbitmap</param>
-            <param name="ThresholdMax">最大閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            bitmapデータを二値化する．
-            </summary>
-            <param name="bmp">bitmap</param>
-            <param name="rThreshold">赤色閾値</param>
-            <param name="gThreshold">緑色閾値</param>
-            <param name="bThreshold">青色閾値</param>
-            <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            bitmapデータを二値化する．
-            </summary>
-            <param name="bmp">bitmap</param>
-            <param name="rThresholdMax">最大赤色閾値</param>
-            <param name="gThresholdMax">最大緑色閾値</param>
-            <param name="bThresholdMax">最大青色閾値</param>
-            <param name="rThresholdMin">最小赤色閾値</param>
-            <param name="gThresholdMin">最小緑色閾値</param>
-            <param name="bThresholdMin">最小青色閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
-            <summary>
-            bitmapデータを二値化する．
-            </summary>
-            <param name="bmp">bitmap</param>
-            <param name="thresholdMax">最大閾値</param>
-            <param name="thresholdMin">最小閾値</param>
-            <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
-            <summary>
-            bitmapデータを二値化する．
-            </summary>
-            <param name="bmp">bitmap</param>
-            <param name="thresholdMax">最大閾値</param>
-            <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,System.Int32)">
-            <summary>
-            bitmapデータを二値化する．
-            </summary>
-            <param name="bmp">bitmap</param>
-            <param name="ThresholdMax">最大閾値</param>
-            <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
-        </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],System.Int32,System.Int32,System.Int32)">
             <summary>
             byte配列のbitmapデータを二値化する．
@@ -344,7 +262,7 @@
             <param name="rThreshold">最大赤色閾値</param>
             <param name="gThreshold">最大緑色閾値</param>
             <param name="bThreshold">最大青色閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -357,7 +275,7 @@
             <param name="rThresholdMin">最小赤色閾値</param>
             <param name="gThresholdMin">最小緑色閾値</param>
             <param name="bThresholdMin">最小青色閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
             <summary>
@@ -366,7 +284,7 @@
             <param name="rgbValues">byte配列に変換されたbitmap</param>
             <param name="thresholdMax">最大閾値</param>
             <param name="thresholdMin">最小閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB)">
             <summary>
@@ -374,7 +292,7 @@
             </summary>
             <param name="rgbValues">byte配列に変換されたbitmap</param>
             <param name="thresholdMax">最大閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],System.Int32)">
             <summary>
@@ -382,7 +300,7 @@
             </summary>
             <param name="rgbValues">byte配列に変換されたbitmap</param>
             <param name="ThresholdMax">最大閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -392,7 +310,7 @@
             <param name="rThreshold">赤色閾値</param>
             <param name="gThreshold">緑色閾値</param>
             <param name="bThreshold">青色閾値</param>
-            <returns>二値化画像(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -405,7 +323,7 @@
             <param name="rThresholdMin">最小赤色閾値</param>
             <param name="gThresholdMin">最小緑色閾値</param>
             <param name="bThresholdMin">最小青色閾値</param>
-            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
             <summary>
@@ -414,7 +332,7 @@
             <param name="bmp">bitmap</param>
             <param name="thresholdMax">最大閾値</param>
             <param name="thresholdMin">最小閾値</param>
-            <returns>二値化画像(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
             <summary>
@@ -422,9 +340,105 @@
             </summary>
             <param name="bmp">bitmap</param>
             <param name="thresholdMax">最大閾値</param>
-            <returns>二値化画像(白：閾値外, 黒：閾値内)</returns>
+            <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,System.Int32)">
+            <summary>
+            bitmapデータを二値化する．
+            </summary>
+            <param name="bmp">bitmap</param>
+            <param name="ThresholdMax">最大閾値</param>
+            <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            byte配列のbitmapデータを二値化する．
+            </summary>
+            <param name="rgbValues">byte配列に変換されたbitmap</param>
+            <param name="rThreshold">最大赤色閾値</param>
+            <param name="gThreshold">最大緑色閾値</param>
+            <param name="bThreshold">最大青色閾値</param>
+            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            byte配列のbitmapデータを二値化する．
+            </summary>
+            <param name="rgbValues">byte配列に変換されたbitmap</param>
+            <param name="rThresholdMax">最大赤色閾値</param>
+            <param name="gThresholdMax">最大緑色閾値</param>
+            <param name="bThresholdMax">最大青色閾値</param>
+            <param name="rThresholdMin">最小赤色閾値</param>
+            <param name="gThresholdMin">最小緑色閾値</param>
+            <param name="bThresholdMin">最小青色閾値</param>
+            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+            <summary>
+            byte配列のbitmapデータを二値化する．
+            </summary>
+            <param name="rgbValues">byte配列に変換されたbitmap</param>
+            <param name="thresholdMax">最大閾値</param>
+            <param name="thresholdMin">最小閾値</param>
+            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+            <summary>
+            byte配列のbitmapデータを二値化する．
+            </summary>
+            <param name="rgbValues">byte配列に変換されたbitmap</param>
+            <param name="thresholdMax">最大閾値</param>
+            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],System.Int32)">
+            <summary>
+            byte配列のbitmapデータを二値化する．
+            </summary>
+            <param name="rgbValues">byte配列に変換されたbitmap</param>
+            <param name="ThresholdMax">最大閾値</param>
+            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            bitmapデータを二値化する．
+            </summary>
+            <param name="bmp">bitmap</param>
+            <param name="rThreshold">赤色閾値</param>
+            <param name="gThreshold">緑色閾値</param>
+            <param name="bThreshold">青色閾値</param>
+            <returns>二値化画像(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            bitmapデータを二値化する．
+            </summary>
+            <param name="bmp">bitmap</param>
+            <param name="rThresholdMax">最大赤色閾値</param>
+            <param name="gThresholdMax">最大緑色閾値</param>
+            <param name="bThresholdMax">最大青色閾値</param>
+            <param name="rThresholdMin">最小赤色閾値</param>
+            <param name="gThresholdMin">最小緑色閾値</param>
+            <param name="bThresholdMin">最小青色閾値</param>
+            <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+            <summary>
+            bitmapデータを二値化する．
+            </summary>
+            <param name="bmp">bitmap</param>
+            <param name="thresholdMax">最大閾値</param>
+            <param name="thresholdMin">最小閾値</param>
+            <returns>二値化画像(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+            <summary>
+            bitmapデータを二値化する．
+            </summary>
+            <param name="bmp">bitmap</param>
+            <param name="thresholdMax">最大閾値</param>
+            <returns>二値化画像(白：閾値外, 黒：閾値内)</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,System.Int32)">
             <summary>
             bitmapデータを二値化する．
             </summary>
@@ -616,15 +630,6 @@
             </summary>
             <param name="bmp">変換元の32bitARGB Bitmap</param>
             <returns>1 pixel = 4 byte (+3:A, +2:R, +1:G, +0:B) に変換したbyte配列</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.ByteArrayToBitmap(System.Byte[],System.Int32,System.Int32)">
-            <summary>
-            byte配列をBitmapに変換する．
-            </summary>
-            <param name="rgbValues">1 pixel = 4 byte (+3:A, +2:R, +1:G, +0:B) に変換されたたbyte配列</param>
-            <param name="width">変換後のbitmapの幅</param>
-            <param name="height">変換後のbitmapの高さ</param>
-            <returns>Bitmap</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.ByteArrayToBitmap(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size)">
             <summary>
@@ -884,7 +889,7 @@
             <param name="bmp2">bitmap</param>
             <returns>論理和画像</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PasteSquare(System.Byte[],System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointSquare(System.Byte[],System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             byte配列のbitmapデータに四角のポインタを描画します．
             </summary>
@@ -898,9 +903,9 @@
             <param name="posY">ポインタの座標(Y)</param>
             <param name="width">ポインタの幅</param>
             <param name="height">ポインタの高さ</param>
-            <returns></returns>
+            <returns>四角のポイント描画画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PasteSquare(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointSquare(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size)">
             <summary>
             byte配列のbitmapデータに四角のポインタを描画します．
             </summary>
@@ -909,16 +914,84 @@
             <param name="color">ポインタの色</param>
             <param name="pos">ポインタの座標</param>
             <param name="size">ポインタのサイズ</param>
-            <returns></returns>
+            <returns>>四角のポイント描画画像のbyte配列</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointSquare(System.Drawing.Bitmap,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            bitmapデータに四角のポインタを描画します．
+            </summary>
+            <param name="bmp">bitmap</param>
+            <param name="R">ポインタの色(R)</param>
+            <param name="G">ポインタの色(G)</param>
+            <param name="B">ポインタの色(B)</param>
+            <param name="posX">ポインタの座標(X)</param>
+            <param name="posY">ポインタの座標(Y)</param>
+            <param name="width">ポインタの幅</param>
+            <param name="height">ポインタの高さ</param>
+            <returns>四角のポイント描画画像</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointSquare(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size)">
+            <summary>
+            bitmapデータに四角のポインタを描画します．
+            </summary>
+            <param name="bmp">bitmap</param>
+            <param name="color">ポインタの色</param>
+            <param name="pos">ポインタの座標</param>
+            <param name="size">ポインタのサイズ</param>
+            <returns>>四角のポイント描画画像</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.DrawBox(System.Byte[],System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            byte配列のbitmapデータに四角のラインを描画します．
+            </summary>
+            <param name="rgbValues">byte配列のbitmap</param>
+            <param name="bmpWidth">Bitmapデータの幅</param>
+            <param name="bmpHeight">Bitmapデータの高さ</param>
+            <param name="R">ラインの色(R)</param>
+            <param name="G">ラインの色(G)</param>
+            <param name="B">ラインの色(B)</param>
+            <param name="posX">ラインの座標(X)</param>
+            <param name="posY">ラインの座標(Y)</param>
+            <param name="width">ラインの幅</param>
+            <param name="height">ラインの高さ</param>
+            <returns>四角のライン描画画像のbyte配列</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.DrawBox(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size)">
+            <summary>
+            byte配列のbitmapデータに四角のラインを描画します．
+            </summary>
+            <param name="rgbValues">byte配列のbitmap</param>
+            <param name="bmpSize">Bitmapデータのサイズ</param>
+            <param name="color">ラインの色</param>
+            <param name="pos">ラインの座標</param>
+            <param name="size">ラインのサイズ</param>
+            <returns>>四角のライン描画画像のbyte配列</returns>
         </member>
         <member name="T:MiYALAB.CSharp.Image.ImageProcessor.Label">
             <summary>
             ラベルデータ構造
             </summary>
         </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Label.#ctor(MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size,System.Int32,MiYALAB.CSharp.Image.ImageProcessor.Point,System.Byte[],System.Drawing.Bitmap)">
+            <summary>
+            ラベルデータ構造
+            </summary>
+            <param name="_posUL">左上座標</param>
+            <param name="_posDR">右下座標</param>
+            <param name="_size">画像サイズ</param>
+            <param name="_area">面積</param>
+            <param name="_centroid">重心座標</param>
+            <param name="_rgbValues">bitmapのbyte配列</param>
+            <param name="_bmp">bitmap</param>
+        </member>
         <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.Pos">
             <summary>
-            座標
+            左上座標
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.PosDR">
+            <summary>
+            右下座標
             </summary>
         </member>
         <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.Size">
@@ -933,7 +1006,7 @@
         </member>
         <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.Centroid">
             <summary>
-            重心
+            重心座標
             </summary>
         </member>
         <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.rgbValues">
@@ -948,12 +1021,20 @@
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Labeling(System.Byte[],System.Int32,System.Int32)">
             <summary>
-            ラベリング処理
+            ラベリング処理(ラスタスキャン方式)
             </summary>
             <param name="rgbValues">byte配列に変換された二値化bitmap</param>
             <param name="width">Bitmapデータの幅</param>
             <param name="height">Bitmapデータの高さ</param>
             <returns>ラベルデータ配列</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Labeling(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size)">
+            <summary>
+            ラベリング処理(ラスタスキャン方式)
+            </summary>
+            <param name="rgbValues">byte配列に変換された二値化bitmap</param>
+            <param name="size">bitmapデータのサイズ</param>
+            <returns></returns>
         </member>
         <member name="T:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL">
             <summary>
@@ -1027,6 +1108,15 @@
             <param name="weight">計算重み</param>
             <returns>Prewittフィルタ後の画像のbyte配列</returns>
         </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterPrewitt(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,System.Double)">
+            <summary>
+            byte配列のグレースケールBitmapデータのPrewittフィルタ処理を行います．
+            </summary>
+            <param name="rgbValues">byte配列のグレースケールBitmapデータ</param>
+            <param name="size">Bitmapデータのサイズ</param>
+            <param name="weight">計算重み</param>
+            <returns>Prewittフィルタ後の画像のbyte配列</returns>
+        </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterSobel(System.Byte[],System.Int32,System.Int32,System.Double)">
             <summary>
             byte配列のグレースケールBitmapデータのSobelフィルタ処理を行います．
@@ -1034,6 +1124,15 @@
             <param name="rgbValues">byte配列のグレースケールBitmapデータ</param>
             <param name="width">Bitmapデータの幅</param>
             <param name="height">Bitmapデータの高さ</param>
+            <param name="weight">計算重み</param>
+            <returns>Sobelフィルタ後の画像のbyte配列</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterSobel(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,System.Double)">
+            <summary>
+            byte配列のグレースケールBitmapデータのSobelフィルタ処理を行います．
+            </summary>
+            <param name="rgbValues">byte配列のグレースケールBitmapデータ</param>
+            <param name="size">Bitmapデータのサイズ</param>
             <param name="weight">計算重み</param>
             <returns>Sobelフィルタ後の画像のbyte配列</returns>
         </member>
