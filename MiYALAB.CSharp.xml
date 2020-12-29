@@ -243,6 +243,58 @@
             PADボタン
             </summary>
         </member>
+        <member name="T:MiYALAB.CSharp.Image.Label">
+            <summary>
+            ラベルデータ構造
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.Label.#ctor(MiYALAB.CSharp.Image.Point,MiYALAB.CSharp.Image.Point,MiYALAB.CSharp.Image.Size,System.Int32,MiYALAB.CSharp.Image.Point,System.Byte[],System.Drawing.Bitmap)">
+            <summary>
+            ラベルデータ構造
+            </summary>
+            <param name="_posUL">左上座標</param>
+            <param name="_posDR">右下座標</param>
+            <param name="_size">画像サイズ</param>
+            <param name="_area">面積</param>
+            <param name="_centroid">重心座標</param>
+            <param name="_rgbValues">bitmapのbyte配列</param>
+            <param name="_bmp">bitmap</param>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Label.Pos">
+            <summary>
+            左上座標
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Label.PosDR">
+            <summary>
+            右下座標
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Label.Size">
+            <summary>
+            サイズ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Label.Area">
+            <summary>
+            面積
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Label.Centroid">
+            <summary>
+            重心座標
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Label.rgbValues">
+            <summary>
+            bitmapデータのbyte配列
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Label.bmp">
+            <summary>
+            bitmapデータ
+            </summary>
+        </member>
         <member name="T:MiYALAB.CSharp.Image.ImageProcessor">
             <summary>
             画像処理クラス
@@ -277,7 +329,7 @@
             <param name="bThresholdMin">最小青色閾値</param>
             <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],MiYALAB.CSharp.Image.RGB,MiYALAB.CSharp.Image.RGB)">
             <summary>
             byte配列のbitmapデータを二値化する．
             </summary>
@@ -286,7 +338,7 @@
             <param name="thresholdMin">最小閾値</param>
             <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Byte[],MiYALAB.CSharp.Image.RGB)">
             <summary>
             byte配列のbitmapデータを二値化する．
             </summary>
@@ -325,7 +377,7 @@
             <param name="bThresholdMin">最小青色閾値</param>
             <returns>二値化画像のbyte配列(白：閾値内, 黒：閾値外)</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.RGB,MiYALAB.CSharp.Image.RGB)">
             <summary>
             bitmapデータを二値化する．
             </summary>
@@ -334,7 +386,7 @@
             <param name="thresholdMin">最小閾値</param>
             <returns>二値化画像(白：閾値内, 黒：閾値外)</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryNotConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.RGB)">
             <summary>
             bitmapデータを二値化する．
             </summary>
@@ -373,7 +425,7 @@
             <param name="bThresholdMin">最小青色閾値</param>
             <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],MiYALAB.CSharp.Image.RGB,MiYALAB.CSharp.Image.RGB)">
             <summary>
             byte配列のbitmapデータを二値化する．
             </summary>
@@ -382,7 +434,7 @@
             <param name="thresholdMin">最小閾値</param>
             <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Byte[],MiYALAB.CSharp.Image.RGB)">
             <summary>
             byte配列のbitmapデータを二値化する．
             </summary>
@@ -421,7 +473,7 @@
             <param name="bThresholdMin">最小青色閾値</param>
             <returns>二値化画像のbyte配列(白：閾値外, 黒：閾値内)</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.RGB,MiYALAB.CSharp.Image.RGB)">
             <summary>
             bitmapデータを二値化する．
             </summary>
@@ -430,7 +482,7 @@
             <param name="thresholdMin">最小閾値</param>
             <returns>二値化画像(白：閾値外, 黒：閾値内)</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BinaryConverter(System.Drawing.Bitmap,MiYALAB.CSharp.Image.RGB)">
             <summary>
             bitmapデータを二値化する．
             </summary>
@@ -483,7 +535,7 @@
             <param name="height">Bitmapデータの高さ</param>
             <returns>黒色重心座標</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BlackCentroid(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BlackCentroid(System.Byte[],MiYALAB.CSharp.Image.Size)">
             <summary>
             黒色重心座標を求めます．
             </summary>
@@ -507,7 +559,7 @@
             <param name="height">Bitmapデータの高さ</param>
             <returns>白色重心座標</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.WhiteCentroid(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.WhiteCentroid(System.Byte[],MiYALAB.CSharp.Image.Size)">
             <summary>
             白色重心座標を求めます．
             </summary>
@@ -531,7 +583,7 @@
             <param name="height">Bitmapデータの高さ</param>
             <returns>白色収縮画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Erode(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Erode(System.Byte[],MiYALAB.CSharp.Image.Size)">
             <summary>
             byte配列の二値化Bitmapデータの白色収縮処理を行います．
             </summary>
@@ -549,7 +601,7 @@
             <param name="border">膨張幅</param>
             <returns>白色収縮画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Erode(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,System.Int32)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Erode(System.Byte[],MiYALAB.CSharp.Image.Size,System.Int32)">
             <summary>
             byte配列の二値化Bitmapデータの白色収縮処理を行います．
             </summary>
@@ -582,7 +634,7 @@
             <param name="height">Bitmapデータの高さ</param>
             <returns>白色膨張画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Dilate(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Dilate(System.Byte[],MiYALAB.CSharp.Image.Size)">
             <summary>
             byte配列の二値化Bitmapデータの白色膨張処理を行います．
             </summary>
@@ -600,7 +652,7 @@
             <param name="border">膨張幅</param>
             <returns>白色膨張画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Dilate(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,System.Int32)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Dilate(System.Byte[],MiYALAB.CSharp.Image.Size,System.Int32)">
             <summary>
             byte配列の二値化Bitmapデータの白色膨張処理を行います．
             </summary>
@@ -624,6 +676,30 @@
             <param name="border">膨張幅</param>
             <returns>白色膨張画像</returns>
         </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Labeling(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            ラベリング処理(ラスタスキャン方式)
+            </summary>
+            <param name="rgbValues">byte配列に変換された二値化bitmap</param>
+            <param name="width">Bitmapデータの幅</param>
+            <param name="height">Bitmapデータの高さ</param>
+            <returns>ラベルデータ配列</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Labeling(System.Byte[],MiYALAB.CSharp.Image.Size)">
+            <summary>
+            ラベリング処理(ラスタスキャン方式)
+            </summary>
+            <param name="rgbValues">byte配列に変換された二値化bitmap</param>
+            <param name="size">bitmapデータのサイズ</param>
+            <returns></returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Labeling(System.Drawing.Bitmap)">
+            <summary>
+            ラベリング処理(ラスタスキャン方式)
+            </summary>
+            <param name="bmp">二値化bitmap</param>
+            <returns>ラベルデータ配列</returns>
+        </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.BitmapToByteArray(System.Drawing.Bitmap)">
             <summary>
             Bitmapをbyte[]に変換する．
@@ -631,123 +707,22 @@
             <param name="bmp">変換元の32bitARGB Bitmap</param>
             <returns>1 pixel = 4 byte (+3:A, +2:R, +1:G, +0:B) に変換したbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.ByteArrayToBitmap(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.ByteArrayToBitmap(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            byte配列をBitmapに変換する．
+            </summary>
+            <param name="rgbValues">1 pixel = 4 byte (+3:A, +2:R, +1:G, +0:B) に変換されたたbyte配列</param>
+            <param name="width">変換後のbitmapの幅</param>
+            <param name="height">変換後のbitmapの高さ</param>
+            <returns>Bitmap</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.ByteArrayToBitmap(System.Byte[],MiYALAB.CSharp.Image.Size)">
             <summary>
             byte配列をBitmapに変換する．
             </summary>
             <param name="rgbValues">1 pixel = 4 byte (+3:A, +2:R, +1:G, +0:B) に変換されたたbyte配列</param>
             <param name="size">変換後のbitmapのサイズ</param>
             <returns>Bitmap</returns>
-        </member>
-        <member name="T:MiYALAB.CSharp.Image.ImageProcessor.RGB">
-            <summary>
-            輝度データ
-            </summary>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.RGB.#ctor(System.Byte,System.Byte,System.Byte)">
-            <summary>
-            輝度データ
-            </summary>
-            <param name="_R"></param>
-            <param name="_G"></param>
-            <param name="_B"></param>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.RGB.#ctor(System.Int32,System.Int32,System.Int32)">
-            <summary>
-            輝度データ
-            </summary>
-            <param name="_R"></param>
-            <param name="_G"></param>
-            <param name="_B"></param>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.RGB.R">
-            <summary>
-            輝度
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.RGB.G">
-            <summary>
-            輝度
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.RGB.B">
-            <summary>
-            輝度
-            </summary>
-        </member>
-        <member name="T:MiYALAB.CSharp.Image.ImageProcessor.Point">
-            <summary>
-            座標データ
-            </summary>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Point.#ctor(System.Int32,System.Int32)">
-            <summary>
-            座標データ
-            </summary>
-            <param name="_x"></param>
-            <param name="_y"></param>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Point.X">
-            <summary>
-            座標
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Point.Y">
-            <summary>
-            座標
-            </summary>
-        </member>
-        <member name="T:MiYALAB.CSharp.Image.ImageProcessor.Size">
-            <summary>
-            画像サイズデータ
-            </summary>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Size.#ctor(System.Int32,System.Int32)">
-            <summary>
-            画像サイズデータ
-            </summary>
-            <param name="_width"></param>
-            <param name="_height"></param>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Size.Width">
-            <summary>
-            サイズ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Size.Height">
-            <summary>
-            サイズ
-            </summary>
-        </member>
-        <member name="T:MiYALAB.CSharp.Image.ImageProcessor.Color">
-            <summary>
-            色の輝度データ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Color.Black">
-            <summary>
-            黒色(0, 0, 0)
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Color.White">
-            <summary>
-            白色(255, 255, 255)
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Color.Red">
-            <summary>
-            赤色(255, 0, 0)
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Color.Green">
-            <summary>
-            緑色(0, 255, 0)
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Color.Blue">
-            <summary>
-            青色(0, 0, 255)
-            </summary>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Trim(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -762,7 +737,7 @@
             <param name="trimHeight">トリミング高さ</param>
             <returns>トリミング画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Trim(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size,MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Trim(System.Byte[],MiYALAB.CSharp.Image.Size,MiYALAB.CSharp.Image.Point,MiYALAB.CSharp.Image.Size)">
             <summary>
             byte配列のbitmapデータをトリミングします．
             </summary>
@@ -783,7 +758,7 @@
             <param name="trimHeight">トリミング高さ</param>
             <returns>トリミング画像</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Trim(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Trim(System.Drawing.Bitmap,MiYALAB.CSharp.Image.Point,MiYALAB.CSharp.Image.Size)">
             <summary>
             byte配列のbitmapデータをトリミングします．
             </summary>
@@ -791,41 +766,6 @@
             <param name="pos">トリミング左上座標</param>
             <param name="trimSize">トリミングサイズ</param>
             <returns>トリミング画像</returns>
-        </member>
-        <member name="T:MiYALAB.CSharp.Image.ImageProcessor.GRAYSCALE">
-            <summary>
-            グレースケール変換法
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.GRAYSCALE.Average">
-            <summary>
-            v = (R+G+B)/3
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.GRAYSCALE.BT601">
-            <summary>
-            v = 0.299R + 0.587G + 0.114B
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.GRAYSCALE.BT709">
-            <summary>
-            v = 0.2126R + 0.7152G + 0.0722B
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.GRAYSCALE.YCgCo">
-            <summary>
-            v = 0.25R + 0.50G + 0.25B
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.GRAYSCALE.Max">
-            <summary>
-            v = max(R, G, B)
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.GRAYSCALE.Min">
-            <summary>
-            v = min(R, G, B)
-            </summary>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.GrayscaleConverter(System.Byte[],System.Int32)">
             <summary>
@@ -889,7 +829,7 @@
             <param name="bmp2">bitmap</param>
             <returns>論理和画像</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointSquare(System.Byte[],System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointBox(System.Byte[],System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             byte配列のbitmapデータに四角のポインタを描画します．
             </summary>
@@ -905,7 +845,7 @@
             <param name="height">ポインタの高さ</param>
             <returns>四角のポイント描画画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointSquare(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointBox(System.Byte[],MiYALAB.CSharp.Image.Size,MiYALAB.CSharp.Image.RGB,MiYALAB.CSharp.Image.Point,MiYALAB.CSharp.Image.Size)">
             <summary>
             byte配列のbitmapデータに四角のポインタを描画します．
             </summary>
@@ -914,9 +854,9 @@
             <param name="color">ポインタの色</param>
             <param name="pos">ポインタの座標</param>
             <param name="size">ポインタのサイズ</param>
-            <returns>>四角のポイント描画画像のbyte配列</returns>
+            <returns>四角のポイント描画画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointSquare(System.Drawing.Bitmap,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointBox(System.Drawing.Bitmap,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             bitmapデータに四角のポインタを描画します．
             </summary>
@@ -930,7 +870,7 @@
             <param name="height">ポインタの高さ</param>
             <returns>四角のポイント描画画像</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointSquare(System.Drawing.Bitmap,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.PointBox(System.Drawing.Bitmap,MiYALAB.CSharp.Image.RGB,MiYALAB.CSharp.Image.Point,MiYALAB.CSharp.Image.Size)">
             <summary>
             bitmapデータに四角のポインタを描画します．
             </summary>
@@ -938,9 +878,9 @@
             <param name="color">ポインタの色</param>
             <param name="pos">ポインタの座標</param>
             <param name="size">ポインタのサイズ</param>
-            <returns>>四角のポイント描画画像</returns>
+            <returns>四角のポイント描画画像</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.DrawBox(System.Byte[],System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.DrawBoxLine(System.Byte[],System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             byte配列のbitmapデータに四角のラインを描画します．
             </summary>
@@ -956,7 +896,7 @@
             <param name="height">ラインの高さ</param>
             <returns>四角のライン描画画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.DrawBox(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,MiYALAB.CSharp.Image.ImageProcessor.RGB,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.DrawBoxLine(System.Byte[],MiYALAB.CSharp.Image.Size,MiYALAB.CSharp.Image.RGB,MiYALAB.CSharp.Image.Point,MiYALAB.CSharp.Image.Size)">
             <summary>
             byte配列のbitmapデータに四角のラインを描画します．
             </summary>
@@ -965,116 +905,34 @@
             <param name="color">ラインの色</param>
             <param name="pos">ラインの座標</param>
             <param name="size">ラインのサイズ</param>
-            <returns>>四角のライン描画画像のbyte配列</returns>
+            <returns>四角のライン描画画像のbyte配列</returns>
         </member>
-        <member name="T:MiYALAB.CSharp.Image.ImageProcessor.Label">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.DrawBoxLine(System.Byte[],MiYALAB.CSharp.Image.Size,MiYALAB.CSharp.Image.RGB,MiYALAB.CSharp.Image.Point,MiYALAB.CSharp.Image.Point)">
             <summary>
-            ラベルデータ構造
+            byte配列のbitmapデータに四角のラインを描画します．
             </summary>
+            <param name="rgbValues">byte配列のbitmap</param>
+            <param name="bmpSize">Bitmapデータのサイズ</param>
+            <param name="color">ラインの色</param>
+            <param name="posUL">ラインの左上座標</param>
+            <param name="posDR">ラインの右下座標</param>
+            <returns>四角のライン描画画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Label.#ctor(MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Point,MiYALAB.CSharp.Image.ImageProcessor.Size,System.Int32,MiYALAB.CSharp.Image.ImageProcessor.Point,System.Byte[],System.Drawing.Bitmap)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.DrawBox(System.Byte[],System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
-            ラベルデータ構造
+            byte配列のbitmapデータに四角を描画します．
             </summary>
-            <param name="_posUL">左上座標</param>
-            <param name="_posDR">右下座標</param>
-            <param name="_size">画像サイズ</param>
-            <param name="_area">面積</param>
-            <param name="_centroid">重心座標</param>
-            <param name="_rgbValues">bitmapのbyte配列</param>
-            <param name="_bmp">bitmap</param>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.Pos">
-            <summary>
-            左上座標
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.PosDR">
-            <summary>
-            右下座標
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.Size">
-            <summary>
-            サイズ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.Area">
-            <summary>
-            面積
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.Centroid">
-            <summary>
-            重心座標
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.rgbValues">
-            <summary>
-            bitmapデータのbyte配列
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.Label.bmp">
-            <summary>
-            bitmapデータ
-            </summary>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Labeling(System.Byte[],System.Int32,System.Int32)">
-            <summary>
-            ラベリング処理(ラスタスキャン方式)
-            </summary>
-            <param name="rgbValues">byte配列に変換された二値化bitmap</param>
-            <param name="width">Bitmapデータの幅</param>
-            <param name="height">Bitmapデータの高さ</param>
-            <returns>ラベルデータ配列</returns>
-        </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Labeling(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size)">
-            <summary>
-            ラベリング処理(ラスタスキャン方式)
-            </summary>
-            <param name="rgbValues">byte配列に変換された二値化bitmap</param>
-            <param name="size">bitmapデータのサイズ</param>
-            <returns></returns>
-        </member>
-        <member name="T:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL">
-            <summary>
-            フィルタカーネル
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL.Average">
-            <summary>
-            平均フィルタ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL.Gaussian">
-            <summary>
-            ガウシアンフィルタ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL.PrewittX">
-            <summary>
-            X方向Prewittフィルタ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL.PrewittY">
-            <summary>
-            Y方向Prewittフィルタ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL.SobelX">
-            <summary>
-            X方向Sobelフィルタ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL.SobelY">
-            <summary>
-            Y方向Sobelフィルタ
-            </summary>
-        </member>
-        <member name="F:MiYALAB.CSharp.Image.ImageProcessor.FILTER_KERNEL.Laplacian">
-            <summary>
-            ラプラシアンフィルタ
-            </summary>
+            <param name="rgbValues">byte配列のbitmap</param>
+            <param name="bmpWidth">Bitmapデータの幅</param>
+            <param name="bmpHeight">Bitmapデータの高さ</param>
+            <param name="R">ラインの色(R)</param>
+            <param name="G">ラインの色(G)</param>
+            <param name="B">ラインの色(B)</param>
+            <param name="posX">ラインの座標(X)</param>
+            <param name="posY">ラインの座標(Y)</param>
+            <param name="width">ラインの幅</param>
+            <param name="height">ラインの高さ</param>
+            <returns>四角描画画像のbyte配列</returns>
         </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Filter(System.Byte[],System.Int32,System.Int32,System.Double[0:,0:],System.Double)">
             <summary>
@@ -1098,6 +956,16 @@
             <param name="weight">計算重み</param>
             <returns>フィルタ後の画像のbyte配列</returns> 
         </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterGaussian(System.Byte[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            byte配列のグレースケールBitmapデータのガウシアンフィルタ処理を行います．
+            </summary>
+            <param name="rgbValues">byte配列のグレースケールBitmapデータ</param>
+            <param name="width">Bitmapデータの幅</param>
+            <param name="height">Bitmapデータの高さ</param>
+            <param name="kernelSize">kernelの大きさ(3 or 5 or 7)</param>
+            <returns>ガウシアンフィルタ後の画像のbyte配列</returns>
+        </member>
         <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterPrewitt(System.Byte[],System.Int32,System.Int32,System.Double)">
             <summary>
             byte配列のグレースケールBitmapデータのPrewittフィルタ処理を行います．
@@ -1108,7 +976,7 @@
             <param name="weight">計算重み</param>
             <returns>Prewittフィルタ後の画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterPrewitt(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,System.Double)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterPrewitt(System.Byte[],MiYALAB.CSharp.Image.Size,System.Double)">
             <summary>
             byte配列のグレースケールBitmapデータのPrewittフィルタ処理を行います．
             </summary>
@@ -1127,7 +995,7 @@
             <param name="weight">計算重み</param>
             <returns>Sobelフィルタ後の画像のbyte配列</returns>
         </member>
-        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterSobel(System.Byte[],MiYALAB.CSharp.Image.ImageProcessor.Size,System.Double)">
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.FilterSobel(System.Byte[],MiYALAB.CSharp.Image.Size,System.Double)">
             <summary>
             byte配列のグレースケールBitmapデータのSobelフィルタ処理を行います．
             </summary>
@@ -1135,6 +1003,212 @@
             <param name="size">Bitmapデータのサイズ</param>
             <param name="weight">計算重み</param>
             <returns>Sobelフィルタ後の画像のbyte配列</returns>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.ImageProcessor.Canny(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Canny法によるエッジ検出
+            </summary>
+            <param name="rgbValues">微分画像</param>
+            <param name="width">bitmapデータの幅</param>
+            <param name="height">bitmapデータの高さ</param>
+            <param name="thresholdMin">canny最小閾値</param>
+            <param name="thresholdMax">canny最大閾値</param>
+            <returns></returns>
+        </member>
+        <member name="T:MiYALAB.CSharp.Image.RGB">
+            <summary>
+            輝度データ
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.RGB.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            輝度データ
+            </summary>
+            <param name="_R"></param>
+            <param name="_G"></param>
+            <param name="_B"></param>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.RGB.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            輝度データ
+            </summary>
+            <param name="_R"></param>
+            <param name="_G"></param>
+            <param name="_B"></param>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.RGB.R">
+            <summary>
+            輝度
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.RGB.G">
+            <summary>
+            輝度
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.RGB.B">
+            <summary>
+            輝度
+            </summary>
+        </member>
+        <member name="T:MiYALAB.CSharp.Image.Point">
+            <summary>
+            座標データ
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.Point.#ctor(System.Int32,System.Int32)">
+            <summary>
+            座標データ
+            </summary>
+            <param name="_x"></param>
+            <param name="_y"></param>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Point.X">
+            <summary>
+            座標
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Point.Y">
+            <summary>
+            座標
+            </summary>
+        </member>
+        <member name="T:MiYALAB.CSharp.Image.Size">
+            <summary>
+            画像サイズデータ
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.Image.Size.#ctor(System.Int32,System.Int32)">
+            <summary>
+            画像サイズデータ
+            </summary>
+            <param name="_width"></param>
+            <param name="_height"></param>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Size.Width">
+            <summary>
+            サイズ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Size.Height">
+            <summary>
+            サイズ
+            </summary>
+        </member>
+        <member name="T:MiYALAB.CSharp.Image.Color">
+            <summary>
+            色の輝度データ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Color.Black">
+            <summary>
+            黒色(0, 0, 0)
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Color.White">
+            <summary>
+            白色(255, 255, 255)
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Color.Red">
+            <summary>
+            赤色(255, 0, 0)
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Color.Green">
+            <summary>
+            緑色(0, 255, 0)
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.Color.Blue">
+            <summary>
+            青色(0, 0, 255)
+            </summary>
+        </member>
+        <member name="T:MiYALAB.CSharp.Image.GrayScaleMethod">
+            <summary>
+            グレースケール変換法
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.GrayScaleMethod.Average">
+            <summary>
+            v = (R+G+B)/3
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.GrayScaleMethod.BT601">
+            <summary>
+            v = 0.299R + 0.587G + 0.114B
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.GrayScaleMethod.BT709">
+            <summary>
+            v = 0.2126R + 0.7152G + 0.0722B
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.GrayScaleMethod.YCgCo">
+            <summary>
+            v = 0.25R + 0.50G + 0.25B
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.GrayScaleMethod.Max">
+            <summary>
+            v = max(R, G, B)
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.GrayScaleMethod.Min">
+            <summary>
+            v = min(R, G, B)
+            </summary>
+        </member>
+        <member name="T:MiYALAB.CSharp.Image.FilterKernel">
+            <summary>
+            フィルタカーネル
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.Average">
+            <summary>
+            平均フィルタ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.Gaussian3">
+            <summary>
+            ガウシアンフィルタ3x3
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.Gaussian5">
+            <summary>
+            ガウシアンフィルタ5x5
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.Gaussian7">
+            <summary>
+            ガウシアンフィルタ7x7
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.PrewittX">
+            <summary>
+            X方向Prewittフィルタ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.PrewittY">
+            <summary>
+            Y方向Prewittフィルタ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.SobelX">
+            <summary>
+            X方向Sobelフィルタ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.SobelY">
+            <summary>
+            Y方向Sobelフィルタ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Image.FilterKernel.Laplacian">
+            <summary>
+            ラプラシアンフィルタ
+            </summary>
         </member>
     </members>
 </doc>
