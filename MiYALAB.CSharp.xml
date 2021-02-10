@@ -149,6 +149,48 @@
             描画画像を削除します．
             </summary>
         </member>
+        <member name="T:MiYALAB.CSharp.Device.DeviceProperty">
+            <summary>
+            デバイスデータ
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Device.DeviceProperty.name">
+            <summary>
+            ハードウェア名
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Device.DeviceProperty.pnpClass">
+            <summary>
+            pnpクラス
+            </summary>
+        </member>
+        <member name="F:MiYALAB.CSharp.Device.DeviceProperty.deviceId">
+            <summary>
+            ハードウェアID
+            </summary>
+        </member>
+        <member name="T:MiYALAB.CSharp.Device.CaptureDeviceProcessor">
+            <summary>
+            キャプチャデバイスクラス
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.Device.CaptureDeviceProcessor.GetDeviceList">
+            <summary>
+            キャプチャデバイスリスト取得
+            </summary>
+            <returns>キャプチャデバイスリスト</returns>
+        </member>
+        <member name="T:MiYALAB.CSharp.Device.SerialDeviceProcessor">
+            <summary>
+            シリアル通信デバイスクラス
+            </summary>
+        </member>
+        <member name="M:MiYALAB.CSharp.Device.SerialDeviceProcessor.GetDeviceList">
+            <summary>
+            シリアル通信デバイスリスト取得
+            </summary>
+            <returns>シリアル通信デバイスリスト</returns>
+        </member>
         <member name="T:MiYALAB.CSharp.Gamepad.GamepadProcessor">
             <summary>
             ゲームパッドコントロール用クラス
